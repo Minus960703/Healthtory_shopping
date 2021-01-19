@@ -23,19 +23,19 @@
 			<label>분류</label> 
 				<span>${goodsView.goodsPart}</span>
 			<br/>
-			<label>상품번호</label>
+			<label>상품 번호</label>
 				<span>${goodsView.goodsNum}</span>
 			<br/>
 			
-			<label>상품이름</label>
+			<label>상품 이름</label>
 				<span>${goodsView.goodsName}</span>
 			<br/>
 			
-			<label>상품가격</label>
+			<label>상품 가격</label>
 				<fmt:formatNumber value="${goodsView.goodsPrice}" pattern="###,###,###"></fmt:formatNumber>
 			<br/>
 			
-			<label>상품재고</label>
+			<label>상품 재고</label>
 				<span>${goodsView.goodsStock}</span>
 			<br/>
 			
