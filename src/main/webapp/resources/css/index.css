@@ -1,0 +1,190 @@
+@media screen and (max-width:700px){
+    #nav #user {
+        font-size: 1em;
+    }
+    #footer #QnA{
+        width: 100%;
+    }
+}
+@media screen and (min-width:701px) and (max-width:1200px){
+    #nav{
+        width: 80%;
+        margin: 0 auto;
+    }   
+    #wrap{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #footer #QnA{
+        width: 80%;
+    }
+}
+@media screen and (min-width:1201px){
+    #nav{
+        width: 80%;
+        margin: 0 auto;
+    }   
+    #wrap{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #footer #QnA{
+        width: 80%;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+#nav{
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+#nav #logo{
+    margin: 3em auto;
+    text-align: center;
+}
+
+#nav #user{
+    width: 100%;
+    margin: 0 auto;
+}
+
+#nav #user ul {
+    align-content: center;
+    overflow: hidden;
+}
+
+#nav #user ul li:first-child{
+    border-radius: 0 4px 4px 0;
+}
+
+#nav #user ul li:last-child{
+    border-radius: 4px 0 0 4px;
+}
+
+#nav #user ul li{
+    float: right;
+    width: 10%;
+    box-sizing: border-box;
+    display: grid;
+    text-align: center;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
+#nav #user ul li a{
+    color: gray;
+    font-weight: bold;
+    background-color: #c3c3c3;
+}
+
+#nav #user ul li a:hover{
+    background-color: #FFF;
+}
+
+#nav #menubar {
+    margin: 2em auto;
+}
+
+#nav #menubar ul {
+    align-content: center;
+    overflow: hidden;
+}
+
+#nav #menubar ul li:first-child{
+    border-radius: 4px 0 0 4px;
+}
+
+#nav #menubar ul li:last-child{
+    border-radius: 0 4px 4px 0;
+}
+
+#nav #menubar ul li {
+    float: left;
+    width: 20%;
+    display: grid;
+    height: 50px;
+    line-height: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+#nav #menubar ul li a{
+    color: gray;
+    font-weight: bold;
+    background-color: #c3c3c3;
+}
+
+#nav #menubar ul li a:hover{
+    background-color: #FFF;
+}
+
+#first{
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+#first #banner{
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+}
+
+#first #content{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+
+#footer {
+    display: grid;
+}
+#footer #QnA{
+    align-content: center;
+    margin: 0 auto;
+    height: 130px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+#footer #QnA ul{
+    overflow: hidden;
+}
+#footer #QnA ul li{
+    width: 25%;
+    border: 1px solid #ccc;
+    float: left;
+    height: 130px;
+    box-sizing: border-box;
+}
+
+#footer #copyright{
+    align-content: center;
+    margin: 0 auto;
+    display: grid;
+    width: 100%;
+    height: 150px;
+    border: 1px solid #ccc;
+}
+
+#footer #copyright #info{
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+#footer #copyright #info p{
+    margin: 1em 3em;
+}

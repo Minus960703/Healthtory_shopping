@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.healthtory.mappers.goodsMapper">
+	
+	<!-- 상품 등록 -->
+	<insert id="register" parameterType="com.healthtory.domain.GoodsVO">
+		insert into 
+			healthtory_goods(goodsNum, goodsName, goodsPrice, goodsStock, goodsPart)
+				values (#{goodsNum}, #{goodsName}, #{goodsPrice}, #{goodsStock}, #{goodsPart})
+	</insert>
+	
+	<!-- 상품 목록 -->
+	<select id="goodslist" resultType="com.healthtory.domain.GoodsVO">
+		select goodsNum, goodsName, goodsPart, goodsPrice, goodsStock 
+			from healthtory_goods
+			order by goodsName desc;
+	</select>
+	
+	<!-- 상품 조회 -->
+	<select id="goodsView" resultType="com.healthtory.domain.GoodsVO">
+		select goodsNum, goodsName, goodsPart, goodsPrice, goodsStock
+			from healthtory_goods
+				where goodsNum = #{goodsNum}
+	</select>
+	
+	<!-- 상품 수정 -->
+	<update id="goodsModify">
+		update healthtory_goods
+			set
+				goodsNum = #{goodsNum},
+				goodsName = #{goodsName},
+				goodsPart = #{goodsPart},
+				goodsPrice = #{goodsPrice},
+				goodsStock = #{goodsStock}
+			where goodsNum = ${goodsNum}
+	</update>
+
+	<!-- 상품 삭제 -->
+	<delete id="goodsDelete">
+		delete
+			from healthtory_goods
+		where goodsNum = #{goodsNum}
+	</delete>
+</mapper>

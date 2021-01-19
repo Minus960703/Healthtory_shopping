@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.healthtory.mappers.userMapper">
+	
+	<!-- 회원 가입 -->
+	<insert id="join">
+		insert into
+			healthtory_user(userId, userPass, userName, userPhone, userEmail)
+			values (#{userId}, #{userPass}, #{userName}, #{userPhone}, #{userEmail})
+	</insert>
+	
+	<!-- 로그인 -->
+	<select id="login" resultType="com.healthtory.domain.UserVO">
+		select 
+			userId, userName, userPass, userPhone, userEmail, userAddr1, userAddr2, userAddr3, userPost, grade
+		from
+			healthtory_user
+		where userId = #{userId} AND userPass = #{userPass}
+	</select>
+	
+</mapper>
