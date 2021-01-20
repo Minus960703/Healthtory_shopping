@@ -14,7 +14,7 @@
 
 	<!-- main -->
 	<section id="container">
-		<form role="form" method="post" autocomplete="off">
+		<form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
 			<input type="hidden" name="goodsNum" value="${goods.goodsNum}">
 			<h2> 상품 수정 </h2><br/>
 			<label>분류</label> 
@@ -38,6 +38,30 @@
 			
 			<label>상품재고</label>
 			<input type="text" name="goodsStock" id="goodsStock" value="${goods.goodsStock}"/><br/>
+			
+			<label>이미지</label>
+			<input type="file" id="goodsImage" name="file" />
+			<div class="select_img">
+				<img src="${goods.goodsImage}" />
+				<input type="hidden" name="goodsImage" value="${goods.goodsImage}" />
+				<input type="hidden" name="goodsThumbnail" value="${goods.goodsThumbnail}" />
+			</div>
+
+			<script>
+				$("#goodsImage").change(
+						function() {
+							if (this.files && this.files[0]) {
+								var reader = new FileReader;
+								reader.onload = function(data) {
+									$(".select_img img").attr("src",
+											data.target.result).width(500);
+								}
+								reader.readAsDataURL(this.files[0]);
+							}
+						});
+			</script>
+
+			<%=request.getRealPath("/")%>
 			
 			<button type="submit" id="update_Btn">완료</button>
 			<button type="button" id="back_Btn">취소</button>

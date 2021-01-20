@@ -8,6 +8,7 @@ public class GoodsVO {
 	private int goodsStock;
 	private String goodsImage;
 	private String goodsPart;
+	private String goodsThumbnail;
 	
 	public int getGoodsNum() {
 		return goodsNum;
@@ -45,6 +46,13 @@ public class GoodsVO {
 	public void setGoodsPart(String goodsPart) {
 		this.goodsPart = goodsPart;
 	}
+	public String getGoodsThumbnail() {
+		return goodsThumbnail;
+	}
+	public void setGoodsThumbnail(String goodsThumbnail) {
+		this.goodsThumbnail = goodsThumbnail;
+	}
+	
 	
 	
 }

@@ -7,8 +7,8 @@
 	<!-- 상품 등록 -->
 	<insert id="register" parameterType="com.healthtory.domain.GoodsVO">
 		insert into 
-			healthtory_goods(goodsNum, goodsName, goodsPrice, goodsStock, goodsPart)
-				values (#{goodsNum}, #{goodsName}, #{goodsPrice}, #{goodsStock}, #{goodsPart})
+			healthtory_goods(goodsNum, goodsName, goodsPrice, goodsStock, goodsPart, goodsImage, goodsThumbnail)
+				values (#{goodsNum}, #{goodsName}, #{goodsPrice}, #{goodsStock}, #{goodsPart}, #{goodsImage}, #{goodsThumbnail})
 	</insert>
 	
 	<!-- 상품 목록 -->
@@ -20,7 +20,7 @@
 	
 	<!-- 상품 조회 -->
 	<select id="goodsView" resultType="com.healthtory.domain.GoodsVO">
-		select goodsNum, goodsName, goodsPart, goodsPrice, goodsStock
+		select goodsNum, goodsName, goodsPart, goodsPrice, goodsStock, goodsImage, goodsThumbnail
 			from healthtory_goods
 				where goodsNum = #{goodsNum}
 	</select>
@@ -33,7 +33,9 @@
 				goodsName = #{goodsName},
 				goodsPart = #{goodsPart},
 				goodsPrice = #{goodsPrice},
-				goodsStock = #{goodsStock}
+				goodsStock = #{goodsStock},
+				goodsImage = #{goodsImage},
+				goodsThumbnail = #{goodsThumbnail}
 			where goodsNum = ${goodsNum}
 	</update>
 

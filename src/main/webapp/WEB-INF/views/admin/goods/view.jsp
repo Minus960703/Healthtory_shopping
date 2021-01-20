@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>관리자 | 상품 조회</title>
 	 <!-- 제이쿼리 -->
-	 <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+	 <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 </head>
 <body>
 	<!-- nav -->
@@ -16,7 +16,7 @@
 
 	<!-- main -->
 	<section id="container">
-		<form role="form" method="post" autocomplete="off">
+		<form role="form" method="post" autocomplete="off" enctype="multipart/form-data">
 		
 		<input type="hidden" name="goodsNum" value="${goodsView.goodsNum}"/>
 			<h2> 상품 등록 </h2><br/>
@@ -38,6 +38,15 @@
 			<label>상품 재고</label>
 				<span>${goodsView.goodsStock}</span>
 			<br/>
+			
+			<label>이미지</label>
+				<span><img src="${goodsView.goodsImage}"/></span>
+			<br/>
+			
+			<label>썸네일</label>
+				<span><img src="${goodsView.goodsThumbnail}"/></span>
+			<br/>
+			
 			
 			<div class="inputArea">
 			 <button type="button" id="modify_Btn" class="btn btn-warning">수정</button>
