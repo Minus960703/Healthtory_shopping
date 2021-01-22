@@ -40,7 +40,7 @@
 			<br/>
 			
 			<label>이미지</label>
-				<span><img src="${goodsView.goodsImage}"/></span>
+				<span>${goodsView.goodsImage}"</span>
 			<br/>
 			
 			<label>썸네일</label>
