@@ -13,7 +13,7 @@
 	
 	<!-- 상품 목록 -->
 	<select id="goodslist" resultType="com.healthtory.domain.GoodsVO">
-		select goodsNum, goodsName, goodsPart, goodsPrice, goodsStock 
+		select goodsNum, goodsThumbnail, goodsName, goodsPart, goodsPrice, goodsStock 
 			from healthtory_goods
 			order by goodsName desc;
 	</select>

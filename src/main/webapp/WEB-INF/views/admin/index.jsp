@@ -15,6 +15,8 @@
 		<ul>
 			<li><a href="/admin/goods/register">상품 등록</a></li>
 			<li><a href="/admin/goods/list">상품 목록</a></li>
+			<li><a href="/shop/list?c=protein">프로틴</a></li>
+			<li><a href="/shop/list?c=chicken">닭가슴살</a></li>
 			<li><a href="">상품 리뷰</a></li>
 			<li><a href="">유저 목록</a></li>
 		</ul>

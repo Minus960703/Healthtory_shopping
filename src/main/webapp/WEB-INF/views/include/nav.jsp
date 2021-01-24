@@ -23,11 +23,11 @@
         </div>
        <div id="menubar">
         <ul>
-            <li><a href="javascript:(0)">menu1</a></li>
-            <li><a href="javascript:(0)">menu2</a></li>
-            <li><a href="javascript:(0)">menu3</a></li>
-            <li><a href="javascript:(0)">menu4</a></li>
-            <li><a href="javascript:(0)">menu5</a></li>
+            <li><a href="/shop/list?c=protein">프로틴</a></li>
+            <li><a href="/shop/list?c=gainer">게이너</a></li>
+            <li><a href="/shop/list?c=chicken">닭가슴살</a></li>
+            <li><a href="/shop/list?c=shaker">쉐이커</a></li>
+            <li><a href="/shop/list?c=starp">스트랩/벨트</a></li>
         </ul>
        </div>
     </div>

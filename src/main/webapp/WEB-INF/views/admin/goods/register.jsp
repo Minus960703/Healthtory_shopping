@@ -92,8 +92,7 @@ $(document).ready(function() {
 				<option value="gainer">게이너</option>
 				<option value="chicken">닭가슴살</option>
 				<option value="shaker">쉐이커</option>
-				<option value="strap">스트랩</option>
-				<option value="belt">리프팅벨트</option>
+				<option value="strap">스트랩/벨트</option>
 			</select> <br /> 
 			<label>상품번호</label> 
 			<input type="text" name="goodsNum" id="goodsNum" /><br />

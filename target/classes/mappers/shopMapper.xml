@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.healthtory.mappers.shopMapper">
+
+<!-- 카테고리별 상품리스트 -->
+	<select id="list" resultType="com.healthtory.domain.GoodsVO">
+		select goodsNum, goodsThumbnail, goodsPart, goodsName, goodsPrice, goodsStock, goodsImage
+			from healthtory_goods
+				where goodsPart = #{goodsPart}
+	</select>
+
+</mapper>

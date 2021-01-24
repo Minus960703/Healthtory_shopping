@@ -55,8 +55,11 @@ public class AdminController {
 	
 	//상품 등록
 	@RequestMapping(value = "/goods/register", method = RequestMethod.POST)
-	public String postGoodsRegister(GoodsVO vo, MultipartFile file) throws Exception{
+	public String postGoodsRegister(GoodsVO vo, MultipartFile file, @RequestParam("goodsThumbnail") String goodsThumbnail) throws Exception{
 		
+		if(goodsThumbnail.equals("null")) {
+			vo.setGoodsThumbnail("/resources/imgUpload/none.png");
+		}
 		/*String imaUploadPath = uploadPath + File.separator + "imgUpload";	//파일이 저장될 기본이 되는 폴더 . imgUpload라는 폴더에 저장됨.
 		String ymdPath = UploadFileUtils.calcPath(imaUploadPath);	//위의 폴더를 기준으로 연월일 폴더 생성
 		String fileName = null;	//기본 경로와 별개로 작성되는 경로 + 파일이름
