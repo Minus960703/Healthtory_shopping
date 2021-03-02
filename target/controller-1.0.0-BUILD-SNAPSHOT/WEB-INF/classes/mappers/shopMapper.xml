@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.healthtory.mappers.shopMapper">
+
+<!-- 카테고리별 상품리스트 -->
+	<select id="list" resultType="com.healthtory.domain.GoodsVO">
+		select goodsNum, goodsThumbnail, goodsPart, goodsName, goodsPrice, goodsStock, goodsImage
+			from healthtory_goods
+				where goodsPart = #{goodsPart}
+	</select>
+	
+	<!-- 상품 조회 -->
+	<select id="view" resultType="com.healthtory.domain.GoodsVO">
+		select goodsNum, goodsName, goodsPart, goodsPrice, goodsStock, goodsImage, goodsThumbnail
+			from healthtory_goods
+				where goodsNum = #{goodsNum}
+	</select>
+	
+	<!-- 댓글 등록 -->
+	<insert id="commentregist">
+		insert into healthtory_comment (goodsNum, userId, comCon)
+			values (#{goodsNum}, #{userId}, #{comCon})
+	</insert>
+	
+	<!-- 댓글 목록 -->
+	<select id="commentList" resultType="com.healthtory.domain.CommentListVO">
+		select
+			c.goodsNum, c.userId, c.comNum, c.comCon, c.comDate, u.userName
+		from healthtory_comment c
+			inner join healthtory_user u
+				on c.userId = u.userId
+			where goodsNum = #{goodsNum}
+	</select>
+
+</mapper>
