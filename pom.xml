@@ -203,7 +203,34 @@
 		</dependency>
 		    
 	</dependencies>
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<!-- 프로필 선택 안했을때, 자동으로 dev를 select 하게 된다 -->
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<env>dev</env>
+			</properties>
+		</profile>
+		<profile>
+			<id>real</id>
+			<properties>
+				<!--resource 필터 사용시 개발자 PC에 적용되는 필터 properties 의 폴더 위치 -->
+				<env>real</env>
+			</properties>
+		</profile>
+	</profiles>
     <build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+			<resource>
+				<directory>src/main/resources/${env}</directory>
+			</resource>
+		</resources>
         <plugins>
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
