@@ -9,7 +9,7 @@ $(function(){
         });
     var lastScrollTop = 0;
     $(window).scroll(()=>{
-        var scrollTop = $(this).scrollTop();    //스크롤바 수직 위치 가져옴.        
+        var scrollTop = $(this).scrollTop();    //스크롤바 수직 위치 가져옴.
         if(scrollTop > 0){
             if((scrollTop > lastScrollTop) ** (lastScrollTop > 0)){
                 $('.main_banner_menubar').css("top","-80px");
@@ -27,5 +27,12 @@ $(function(){
             $('.menu_img').addClass('active');
             $('.menu_img_hover').removeClass('active');
         }
+    })
+    $('.trainer_img').click(function(){
+        var tab_id = $(this).attr('data-tab');
+        console.log(tab_id)
+        $('.main_trainer_info_detail').removeClass('active');
+
+        $("#"+tab_id).addClass('active');
     })
 })

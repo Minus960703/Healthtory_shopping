@@ -71,9 +71,6 @@ ul, li {
     width: 25px;
     display: none;
 }
-.active {
-    display: block;
-}
 
 .main_notice {
     width: 100%;
@@ -152,4 +149,11 @@ ul, li {
     border-radius: 25px;
     line-height: 35px;
     text-align: center;
+}
+.main_trainer_info_detail {
+    display: none;
+}
+
+.active {
+    display: block;
 }
