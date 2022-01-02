@@ -27,7 +27,7 @@ $(function(){
             $('.menu_img').addClass('active');
             $('.menu_img_hover').removeClass('active');
         }
-    })
+    });
     $('.trainer_img').click(function(){
         var tab_id = $(this).attr('data-tab');
         console.log(tab_id)
