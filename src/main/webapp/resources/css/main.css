@@ -149,6 +149,8 @@ ul, li {
     border-radius: 25px;
     line-height: 35px;
     text-align: center;
+    z-index: 4;
+    background: white;
 }
 .main_trainer_info_detail {
     display: none;
@@ -179,4 +181,10 @@ ul, li {
 .footer_bottom_main {
     display: flex;
     justify-content: space-between;
+}
+
+.customer_img {
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
 }
