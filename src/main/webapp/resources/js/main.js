@@ -27,12 +27,15 @@ $(function(){
             $('.menu_img').addClass('active');
             $('.menu_img_hover').removeClass('active');
         }
-    });
+    })
     $('.trainer_img').click(function(){
         var tab_id = $(this).attr('data-tab');
-        console.log(tab_id)
         $('.main_trainer_info_detail').removeClass('active');
 
         $("#"+tab_id).addClass('active');
+    })
+    $('.header_menu li').click(function() {
+        var click_id = $(this).attr('data-id')
+        location.href=click_id+'.html'
     })
 })
