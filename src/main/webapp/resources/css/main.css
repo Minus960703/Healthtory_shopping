@@ -21,7 +21,7 @@ ul, li {
     width: 100%;
     display: flex;
     /* height: 90px; */
-    padding-left: 50px;
+    padding-left: calc(10% - 30px);
     color: #f5f5f5;
     font-family: 'Jua', sans-serif;
     font-size: 20px;
@@ -166,7 +166,7 @@ ul, li {
     /* width: 100%; */
     height: 300px;
     /* justify-content: center; */
-    padding: 0 100px;
+    padding: 20px 10%;
 }
 .footer_left {
     width: 50%;
@@ -179,7 +179,7 @@ ul, li {
     background-color: #ccc;
     height: 40px;
     line-height: 40px;
-    padding: 0px 100px;
+    padding: 0px 10%;
 }
 .footer_bottom_main {
     display: flex;
