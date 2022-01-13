@@ -152,6 +152,7 @@ ul, li {
     text-align: center;
     z-index: 4;
     background: white;
+    cursor: pointer;
 }
 .main_trainer_info_detail {
     display: none;
